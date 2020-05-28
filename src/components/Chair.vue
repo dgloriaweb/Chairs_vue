@@ -7,11 +7,12 @@
         <div class="flex flex-wrap -m-4">
           <div class="lg:w-1/4 md:w-1/2 p-4 w-full"  style="width:100%">
             <a class="block relative h-48 rounded overflow-hidden">
-              <img
+              <!-- <img
                 alt="ecommerce"
                 class="object-cover object-center w-full h-full block"
-                src="https://dummyimage.com/420x260"
-              />
+                src="{{ chair.img_url }}"
+              /> -->
+              <img :src="posterImage" :alt="chair.name" />
             </a>
             <div class="mt-4">
               <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
@@ -33,6 +34,9 @@
 export default {
   props: ['chair'],
   computed: {
+        posterImage: function() {
+      return `${this.chair.img_url}`;
+    },
     chairPath: function() {
       return `/chair/${this.chair.id}`
     },
