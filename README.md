@@ -1,4 +1,4 @@
-# simple_vue
+# chairs_vue
 
 ## Project setup
 ```
@@ -22,7 +22,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-# simple_vue
+# chairs_vue
 # Chairs_vue
 # Chairs_vue
 # chairs_vue
