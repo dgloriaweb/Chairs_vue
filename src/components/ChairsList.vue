@@ -2,6 +2,7 @@
   <ul>
     <li v-for="chair in chairs" :key="chair.id">
       <Chair :chair="chair" />
+      
     </li>
   </ul>
 </template>
