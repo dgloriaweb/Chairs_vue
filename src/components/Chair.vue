@@ -5,23 +5,24 @@
     <section class="text-gray-700 body-font">
       <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-wrap -m-4">
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full"  style="width:100%">
-            <a class="block relative h-48 rounded overflow-hidden">
+          <div class="lg:w-full md:w-1/2 sm:w-full p-4 w-full">
+            <a class="block relative h-48 rounded overflow-hidden"  style="padding:0.5rem;">
               <!-- <img
                 alt="ecommerce"
                 class="object-cover object-center w-full h-full block"
                 src="{{ chair.img_url }}"
               /> -->
-              <img :src="posterImage" :alt="chair.name" />
+              <!-- <img :src="posterImage" :alt="chair.name"  class="object-cover object-center w-full h-full block" style="max-height:90%;margin:auto"/> -->
+              <img :src="posterImage" :alt="chair.name"  />
             </a>
             <div class="mt-4">
               <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                CATEGORY
+                TASK CHAIR
               </h3>
               <h2 class="text-gray-900 title-font text-lg font-medium">
-                The Catalyzer
+                {{ chair.name }}
               </h2>
-              <p class="mt-1">$16.00</p>
+              <p class="mt-1">£{{ chair.price }}</p>
             </div>
           </div>
         </div>

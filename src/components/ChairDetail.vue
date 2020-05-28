@@ -3,7 +3,7 @@
     <div class="chair-wrapper" :style="styles">
       <div class="chair-info">
         <h1>{{ chair.name }}</h1>
-        <h3>Price: </h3>
+        <h3>Price:</h3>
         <p>{{ chair.price }}</p>
       </div>
     </div>
@@ -20,7 +20,13 @@ export default {
   created: function() {
     this.fetchData()
   },
-  
+  computed: {
+    styles() {
+      return {
+        background: `url(${this.chair.img_url}) no-repeat `,
+      }
+    },
+  },
   methods: {
     fetchData: async function() {
       try {
@@ -42,12 +48,12 @@ export default {
 .chair-wrapper {
   position: relative;
   padding-top: 50vh;
-  background-size: cover;
 }
 .chair-info {
   background: #fff;
   color: #222;
   padding: 2rem 10%;
+  opacity:0.6;
 }
 
 .fade-enter-active,
