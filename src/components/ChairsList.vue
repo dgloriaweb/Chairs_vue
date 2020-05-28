@@ -23,8 +23,7 @@ export default {
     fetchData: async function() {
       try {
         const res = await fetch(
-          // `https://babiwes.com/lchairs_v7/public/api/chairs`
-          'http://localhost/chair_api/public/api/chairs'
+          'https://babiwes.com/chairs_api/public/api/chairs'
         )
         const chairs = await res.json()
         this.chairs = chairs.data
